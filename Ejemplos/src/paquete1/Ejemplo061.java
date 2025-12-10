@@ -22,23 +22,36 @@ public class Ejemplo061 {
         String dato;
         // arreglo de tipo entero
         String[] arreglo1 = new String[5]; //  se guardaran nombres de personas
-        
+
         // Se asigna valores al arreglo, pidiendo valores por teclado
         // se usa un ciclo repetitivo
         for (int i = 0; i < arreglo1.length; i++) {
             System.out.println("Ingrese un valor para el arreglo");
             dato = entrada.nextLine();
+            String letra = dato.substring(1);
+            switch (letra) {
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                    arreglo1 [1] = dato;
+                    break;
+                default:
+                    arreglo1 [i] = "Invalidisimo";
+                    
+            }
             // se asigna la variable dato a la posición del arreglo
             // de acuerdo al valor de i
             arreglo1[i] = dato;
         }
-        
+
         // Se hace uso del ciclo repetitivo for para recorrer el arreglo
         for (int i = 0; i < arreglo1.length; i++) {
             System.out.printf("Subíndice o Índice %d, con valor %s\n",
                     i, arreglo1[i]);
         }
-        
+
     }
 
 }
