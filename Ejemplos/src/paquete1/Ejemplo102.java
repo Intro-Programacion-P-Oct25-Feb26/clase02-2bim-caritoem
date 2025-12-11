@@ -32,8 +32,9 @@ public class Ejemplo102 {
             // el valor del nombre del estudiante sea:
             // Luis o Ana
             nombre = estudiantes[i];
-            if (nombre.equals("Luis")) {
-            
+            if (!nombre.equals("Luis")) {
+             //aqui se pone la negacion que quiere decir que se va a cumplir siempre y cuandoel nombre sea
+             //diferente a luis 
                 mensajeFinal = String.format("%sEstudiante:%s - promedio: "
                         + "%.4f\n", 
                         mensajeFinal,
